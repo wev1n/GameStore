@@ -21,7 +21,7 @@ namespace GameStore.Data.Entities
 
         [Required]
         [Range(0, 1000, ErrorMessage = "Price must be between 0 and 1000.")]
-        [Column(TypeName = "decimal(3,2)")]
+        [Column(TypeName = "decimal(5, 2)")]
         public decimal Price { get; set; } = price;
 
         [Required]
