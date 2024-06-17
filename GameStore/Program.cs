@@ -1,6 +1,7 @@
 using GameStore.Components;
 using GameStore.Data;
 using Microsoft.EntityFrameworkCore;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,9 @@ builder.Services.AddRazorComponents()
 builder.Services.AddDbContext<ApplicationDbContext>
     (options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// MudBlazor
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 
